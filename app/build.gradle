@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion Versions.ANDROID_COMPILE_SDK
+    defaultConfig {
+        applicationId "com.example.app"
+        minSdkVersion Versions.ANDROID_MIN_SDK
+        targetSdkVersion Versions.ANDROID_COMPILE_SDK
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        release.java.srcDirs += 'src/release/kotlin'
+        debug.java.srcDirs += 'src/debug/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation AndroidX.appCompat
+    implementation AndroidX.core
+    implementation AndroidX.design
+    implementation AndroidX.supportAnnotations
+
+    implementation Net.retrofit
+    implementation Net.gsonConverter
+    implementation Net.rxJavaAdapter
+    implementation Net.okHttpLogging
+
+    implementation Rx.rxJava
+    implementation Rx.rxAndroid
+
+    implementation Dagger.core
+    implementation Dagger.android
+    implementation Dagger.androidSupport
+    kapt Dagger.processor
+    kapt Dagger.compiler
+
+    implementation Kotlin.stdlib
+
+    testImplementation TestLib.junit
+
+    androidTestImplementation TestLib.androidRunner
+    androidTestImplementation TestLib.androidRules
+    androidTestImplementation TestLib.espressoCore
+}
+repositories {
+    mavenCentral()
+}
