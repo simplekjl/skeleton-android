@@ -34,6 +34,7 @@ dependencies {
     implementation AndroidX.core
     implementation AndroidX.design
     implementation AndroidX.supportAnnotations
+    implementation AndroidX.ktx
 
     implementation Net.retrofit
     implementation Net.gsonConverter

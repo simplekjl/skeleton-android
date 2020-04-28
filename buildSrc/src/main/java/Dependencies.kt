@@ -19,6 +19,7 @@ object Versions {
     const val RX_JAVA = "2.2.16"
     const val RX_ANDROID = "2.1.0"
     const val DAGGER = "2.26"
+    const val KTX = "1.2.0"
 
     // Test
     const val JUNIT = "4.12"
@@ -51,6 +52,7 @@ object AndroidX {
     const val supportAnnotations = "androidx.annotation:annotation:${Versions.ANDROID_X}"
     const val customTabs = "androidx.browser:browser:${Versions.ANDROID_X}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
+    const val ktx = "androidx.core:core-ktx:${Versions.KTX}"
 }
 
 object TestLib {
