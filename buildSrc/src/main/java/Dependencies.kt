@@ -21,6 +21,7 @@ object Versions {
     const val DAGGER = "2.26"
     const val KTX = "1.2.0"
     const val GLIDE = "4.9.0"
+    const val STETHO = "1.5.1"
 
     // Test
     const val JUNIT = "4.12"
@@ -92,4 +93,8 @@ object Dagger {
 
 object Glide {
     const val core = "com.github.bumptech.glide:glide:${Versions.GLIDE}"
+}
+
+object Stetho {
+    const val core = "com.facebook.stetho:stetho:${Versions.STETHO}"
 }

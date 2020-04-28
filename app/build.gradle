@@ -53,6 +53,7 @@ dependencies {
     implementation Kotlin.stdlib
 
     implementation Glide.core
+    implementation Stetho.core
 
     testImplementation TestLib.junit
 
