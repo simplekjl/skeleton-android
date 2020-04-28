@@ -52,6 +52,8 @@ dependencies {
 
     implementation Kotlin.stdlib
 
+    implementation Glide.core
+
     testImplementation TestLib.junit
 
     androidTestImplementation TestLib.androidRunner
