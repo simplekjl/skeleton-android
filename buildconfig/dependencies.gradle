@@ -16,6 +16,7 @@ ext {
     rxAndroidVersion = '2.1.0'
     daggerVersion = '2.26'
     ktxVersion = '1.2.0'
+    aacVersion = '2.2.0'
     glideVersion = '4.9.0'
     stethoVersion = '1.5.1'
     junitVersion = '4.12'
@@ -47,7 +48,9 @@ ext {
             supportAnnotations: "androidx.annotation:annotation:$androidXVersion",
             customTabs        : "androidx.browser:browser:$androidXVersion",
             constraintLayout  : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
-            ktx               : "androidx.core:core-ktx:$ktxVersion"
+            ktx               : "androidx.core:core-ktx:$ktxVersion",
+            lifecycleExtension: "android.arch.lifecycle:extensions:$aacVersion",
+            lifecycleCompiler : "android.arch.lifecycle:compiler:$aacVersion"
     ]
 
     net = [

@@ -40,6 +40,9 @@ dependencies {
     implementation rootProject.androidX.supportAnnotations
     implementation rootProject.androidX.ktx
 
+    implementation rootProject.androidX.lifecycleExtension
+    kapt rootProject.androidX.lifecycleCompiler
+
     implementation rootProject.net.retrofit
     implementation rootProject.net.gsonConverter
     implementation rootProject.net.rxJavaAdapter
