@@ -65,7 +65,7 @@ ext {
     dagger = [
             core          : "com.google.dagger:dagger:$daggerVersion",
             android       : "com.google.dagger:dagger-android:$daggerVersion",
-            androidSupport: "com.google.dagger:dagger-android:$daggerVersion",
+            androidSupport: "com.google.dagger:dagger-android-support:$daggerVersion",
             processor     : "com.google.dagger:dagger-android-processor:$daggerVersion",
             compiler      : "com.google.dagger:dagger-compiler:$daggerVersion"
     ]
