@@ -4,11 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion Versions.ANDROID_COMPILE_SDK
+    compileSdkVersion rootProject.compileSdkVersion
     defaultConfig {
         applicationId "com.example.app"
-        minSdkVersion Versions.ANDROID_MIN_SDK
-        targetSdkVersion Versions.ANDROID_COMPILE_SDK
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.compileSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -30,37 +30,38 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation AndroidX.appCompat
-    implementation AndroidX.core
-    implementation AndroidX.design
-    implementation AndroidX.supportAnnotations
-    implementation AndroidX.ktx
+    implementation rootProject.androidX.appCompat
+    implementation rootProject.androidX.core
+    implementation rootProject.androidX.design
+    implementation rootProject.androidX.supportAnnotations
+    implementation rootProject.androidX.ktx
 
-    implementation Net.retrofit
-    implementation Net.gsonConverter
-    implementation Net.rxJavaAdapter
-    implementation Net.okHttpLogging
+    implementation rootProject.net.retrofit
+    implementation rootProject.net.gsonConverter
+    implementation rootProject.net.rxJavaAdapter
+    implementation rootProject.net.okHttpLogging
 
-    implementation Rx.rxJava
-    implementation Rx.rxAndroid
+    implementation rootProject.rx.rxJava
+    implementation rootProject.rx.rxAndroid
 
-    implementation Dagger.core
-    implementation Dagger.android
-    implementation Dagger.androidSupport
-    kapt Dagger.processor
-    kapt Dagger.compiler
+    implementation rootProject.dagger.core
+    implementation rootProject.dagger.android
+    implementation rootProject.dagger.androidSupport
+    kapt rootProject.dagger.processor
+    kapt rootProject.dagger.compiler
 
-    implementation Kotlin.stdlib
+    implementation rootProject.kotlin.stdlib
 
-    implementation Glide.core
-    implementation Stetho.core
+    implementation rootProject.glide.core
+    implementation rootProject.stetho.core
 
-    testImplementation TestLib.junit
+    testImplementation rootProject.test.junit
 
-    androidTestImplementation TestLib.androidRunner
-    androidTestImplementation TestLib.androidRules
-    androidTestImplementation TestLib.espressoCore
+    androidTestImplementation rootProject.test.androidRunner
+    androidTestImplementation rootProject.test.androidRules
+    androidTestImplementation rootProject.test.espressoCore
 }
+
 repositories {
     mavenCentral()
 }

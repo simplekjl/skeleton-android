@@ -1,4 +1,8 @@
 ext {
+    compileSdkVersion = 28
+    minSdkVersion = 19
+    buildToolsVersion = "28.0.3"
+
     kotlinVersion = '1.3.70'
     androidStudioVersion = '3.6.0'
     androidXVersion = '1.0.0'
