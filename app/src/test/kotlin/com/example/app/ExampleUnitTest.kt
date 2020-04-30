@@ -1,4 +1,4 @@
-package com.aldyaz.aacgen
+package com.example.app
 
 import org.junit.Test
 
