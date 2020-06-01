@@ -2,6 +2,7 @@ package com.example.app.di
 
 import android.content.Context
 import com.example.app.MainApplication
+import dagger.Binds
 import dagger.Module
 
 
@@ -11,5 +12,6 @@ import dagger.Module
  */
 @Module
 abstract class MainModule {
+    @Binds
     internal abstract fun bindApplicationContext(application: MainApplication): Context
 }
