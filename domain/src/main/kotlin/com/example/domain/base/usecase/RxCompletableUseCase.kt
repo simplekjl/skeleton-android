@@ -7,13 +7,14 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableCompletableObserver
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
 
 /**
  * @author Aldyaz Nugroho on 01/06/20.
  * https://github.com/aldyaz
  */
-abstract class RxCompletableUseCase<in Param>(
+abstract class RxCompletableUseCase<in Param> @Inject constructor(
     private val threadExecutor: ThreadExecutor,
     private val postExecutionThread: PostExecutionThread
 ) {

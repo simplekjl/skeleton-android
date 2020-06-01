@@ -9,13 +9,14 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
 
 /**
  * @author Aldyaz Nugroho on 01/06/20.
  * https://github.com/aldyaz
  */
-abstract class RxObservableUseCase<in Param, Result> constructor(
+abstract class RxObservableUseCase<in Param, Result> @Inject constructor(
     private val threadExecutor: ThreadExecutor,
     private val postExecutionThread: PostExecutionThread
 ) {
