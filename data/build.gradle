@@ -37,6 +37,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation project(path: ':domain')
+
     api rootProject.kotlin.stdlib
 
     implementation rootProject.androidX.appCompat
@@ -46,7 +48,7 @@ dependencies {
     api rootProject.net.rxJavaAdapter
     api rootProject.net.okHttpLogging
 
-    implementation rootProject.rx.rxJava
+    api rootProject.rx.rxJava
 
     testImplementation rootProject.test.junit
 
