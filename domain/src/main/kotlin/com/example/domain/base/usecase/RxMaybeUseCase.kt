@@ -8,7 +8,6 @@ import io.reactivex.Maybe
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableMaybeObserver
-import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 
@@ -28,7 +27,7 @@ abstract class RxMaybeUseCase<in Param, Result> @Inject constructor(
     fun execute(param: Param, subscriber: DisposableMaybeObserver<Either<Failure, Result>>) =
         compose {
             createMaybe(param)
-                .subscribeOn(Schedulers.from(threadExecutor))
+                .subscribeOn(threadExecutor.scheduler)
                 .observeOn(postExecutionThread.scheduler)
                 .subscribeWith(subscriber)
         }

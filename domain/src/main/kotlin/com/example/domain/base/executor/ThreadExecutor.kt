@@ -1,6 +1,6 @@
 package com.example.domain.base.executor
 
-import java.util.concurrent.Executor
+import io.reactivex.Scheduler
 
 
 /**
@@ -8,4 +8,6 @@ import java.util.concurrent.Executor
  * https://github.com/aldyaz
  */
 
-interface ThreadExecutor : Executor
+interface ThreadExecutor {
+    val scheduler: Scheduler
+}

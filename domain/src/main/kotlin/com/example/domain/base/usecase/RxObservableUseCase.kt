@@ -8,7 +8,6 @@ import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableObserver
-import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 
@@ -28,7 +27,7 @@ abstract class RxObservableUseCase<in Param, Result> @Inject constructor(
     fun execute(param: Param, subscriber: DisposableObserver<Either<Failure, Result>>) =
         compose {
             Observable.defer { createSingle(param) }
-                .subscribeOn(Schedulers.from(threadExecutor))
+                .subscribeOn(threadExecutor.scheduler)
                 .observeOn(postExecutionThread.scheduler)
                 .subscribeWith(subscriber)
         }

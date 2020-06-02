@@ -6,7 +6,6 @@ import io.reactivex.Completable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableCompletableObserver
-import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 
@@ -25,7 +24,7 @@ abstract class RxCompletableUseCase<in Param> @Inject constructor(
 
     fun execute(param: Param, subscriber: DisposableCompletableObserver) = compose {
         createCompletable(param)
-            .subscribeOn(Schedulers.from(threadExecutor))
+            .subscribeOn(threadExecutor.scheduler)
             .observeOn(postExecutionThread.scheduler)
             .subscribeWith(subscriber)
     }
