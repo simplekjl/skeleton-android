@@ -1,11 +1,6 @@
 package com.example.app.extension
 
 
-/**
- * @author Aldyaz Nugroho on 29/04/20.
- * https://github.com/aldyaz
- */
-
 inline fun <reified T> T?.orThrow(throwable: Throwable): T {
     return this ?: throw throwable
 }
