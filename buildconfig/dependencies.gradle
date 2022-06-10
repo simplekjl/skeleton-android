@@ -14,8 +14,8 @@ ext {
     rxAndroidVersion = '3.0.0'
     daggerVersion = '2.40.5'
 
-    androidxCoreVersion = '1.7.0'
-    androidxAppCompatVersion = '1.4.0'
+    androidxCoreVersion = '1.8.0'
+    androidxAppCompatVersion = '1.4.2'
     androidXMultidexVersion = '2.0.0'
     androidXCardViewVersion = '1.0.0'
     androidXRecyclerViewVersion = '1.2.1'
