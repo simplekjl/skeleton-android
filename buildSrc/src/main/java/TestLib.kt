@@ -6,6 +6,8 @@ object TestLib {
     private const val mockitoKotlinVersion = "2.2.0"
     private const val dexmakerMockitoVersion = "2.19.1"
     private const val robolectricVersion = "4.0.1"
+    private const val mockkVersion = "1.12.0"
+    private const val fixtureVersion = "1.1.0"
 
     const val junit = "junit:junit:$junitVersion"
     const val androidRunner = "androidx.test:runner:$androidTestSupportVersion"
@@ -20,5 +22,8 @@ object TestLib {
     const val kotlinJunit = "org.jetbrains.kotlin:kotlin-test-junit:${KotlinLib.version}"
     const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
     const val robolectric = "org.robolectric:robolectric:$robolectricVersion"
+    const val mockk = "io.mockk:mockk:${mockkVersion}"
+    const val mockkAndroid = "io.mockk:mockk-android:${mockkVersion}"
+    const val fixture = "com.appmattus.fixture:fixture:${fixtureVersion}"
 
 }

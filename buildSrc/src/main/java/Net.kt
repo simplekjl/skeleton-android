@@ -13,5 +13,4 @@ object Net {
     const val moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
     const val chuckerDebug = "com.github.chuckerteam.chucker:library:$chuckerVersion"
     const val chuckerRelease = "com.github.chuckerteam.chucker:library-no-op:$chuckerVersion"
-
 }

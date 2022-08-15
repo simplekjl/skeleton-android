@@ -6,8 +6,11 @@ https://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/
 - Clean Architecture Project Structure
 - Android Architecture Components
 - Jetpack Compose
-- Hilt x Dagger 2
+- Hilt x Dagger 2 x Koin
 - Kotlin Coroutines & Flow
 - Retrofit & OkHttp
 - Moshi
 - Stetho
+- Mockk, Espresso, Fixture, Mockito
+- WorkManager
+- Coil, Glide
